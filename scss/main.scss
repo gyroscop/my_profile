@@ -1,0 +1,137 @@
+
+@import 'variables';
+    body{
+       
+        background: $primary-color;
+        color:set-text-color($primary-color);
+        height: 100%;
+        margin: 0;
+        line-height: 1.5;
+        font-family: 'Times New Roman', Times, serif;
+        
+    } 
+
+    .text-secondary{
+        color:$secondary-color;
+    }
+    .center{
+        align-items: center;
+    }
+    h2,h4{
+        margin:0;
+        font-weight: 400;
+        &.lg-heading{
+            font-size:6rem;
+        }
+    }
+    a{
+        color:#fff;
+         text-decoration: none;
+    }
+    main{
+        padding: 2rem;
+        &#home{
+          padding-top: 200px;
+       }
+       
+      
+       min-height:calc(100vh-60px);
+          .icons{
+              margin-top: 1rem;
+              
+              a{
+                  color:set-text-color($primary-color);
+                  padding: 1.5rem;
+                 &:hover{
+                     color: $secondary-color;
+                     @include easeout();
+                 }
+              }
+              
+          }
+         
+          //overflow: hidden;
+          /*h1{
+              margin-top: 20vh;
+          }*/
+      }
+
+    .about-info{
+        display: grid;
+        grid-gap: 30px;
+        grid-template-areas:
+        'bioimage bio bio'
+        'job1 job2 job3';
+      
+        grid-template-columns:repeat(3, 1fr);
+      
+        .bio-image{
+          grid-area: bioimage;
+          margin: auto;
+          border-radius: 55%;
+          border: #eece1a 3px solid;
+        
+        }
+        
+        .bio{
+          grid-area: bio;
+          font-size: 1.5rem;
+        }
+        
+        .Education{
+          grid-area: job1;
+          
+        }
+        
+        .Social{
+          grid-area:job2 ;
+        }
+        
+        .Address{
+        grid-area: job3;
+        }
+        
+        .job{
+          background: lighten(#444,5);
+          padding: 0.5rem;
+          border-bottom: #eece1a 3px solid;
+          font-size: 1.5rem;
+        }
+      }
+      .boxes{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-top: 1rem;
+      
+        .box{
+           
+            font-size:1.5rem;
+            border: 3px solid #fff;
+            padding: 0.5rem 1.5rem; 
+            margin-bottom: 3rem;
+            @include easeout;
+           
+             &:hover{
+                 padding: 1.5rem 2.5rem;
+                 background:$secondary-color;
+                color:#000;
+                span{
+                    color: set-text-color($secondary-color);
+                }
+                 opacity: 0.6;
+    
+             }
+        
+        }
+    
+    }
+    #main-footer{
+        height: 60px;
+        text-align:center;
+        padding: 1rem;
+        background: darken($color: #444, $amount: 5);
+        font-size: 1.5rem;
+  
+    }
