@@ -1,6 +1,7 @@
 
 @import 'variables';
 @import 'menu';
+@import 'mobile';
     body{
        
         background: $primary-color;
@@ -9,6 +10,7 @@
         margin: 0;
         line-height: 1.5;
         font-family: 'Times New Roman', Times, serif;
+       
         
     } 
 
@@ -79,16 +81,16 @@
           font-size: 1.5rem;
         }
         
-        .Education{
+        .job1{
           grid-area: job1;
           
         }
         
-        .Social{
+        .job2{
           grid-area:job2 ;
         }
         
-        .Address{
+        .job3{
         grid-area: job3;
         }
         
@@ -127,6 +129,24 @@
         
         }
     
+    }
+
+    .projects{
+        display: grid;
+        grid-gap:20px;
+        grid-template-columns: repeat(3,1fr);
+    
+        img{
+            width: 100%;
+            border: 3px #fff solid;
+            display: -ms-inline-grid;
+    
+            &:hover{
+                border-color: $secondary-color;
+                @include easeout;
+            }
+        }
+       
     }
     #main-footer{
         height: 60px;
